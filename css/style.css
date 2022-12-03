@@ -1,11 +1,16 @@
-* {
+*
+{
   box-sizing: border-box;
 }
+:root{
+  --font-family:Arial, Helvetica, sans-serif;
+
+}
+
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -22,17 +27,84 @@ p {
   margin: 0;
 }
 
-.avatar{
-  width: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-}
+
+
+
+/*Header style*/
+
 
 header{
+  padding: 20px;
+  font-family: var(--font-family);
+  background-color: green;
   display: flex;
   justify-content: space-between;
+}
+
+/*Navigation bar styling*/
+
+.me{
+
+  
+  
+}
+
+.avatar{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.avatar img{
+  width: 120%;
+  height: 120%;
+  
+  
+}
+
+nav{
+
+}
+
+ul{
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  justify-content: space-evenly;
+}
+
+
+li{
+  display: inline-block;
+  margin-left: 25px;
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/*this is the styling for the central image*/
+
+.hero-banner{
+  background-image: url(../images/02-hero-bg.jpg);
+  display: block;
+  margin-bottom: 0px;
+  height: 500px;
+  width: 100%;
+
 }
 
 .project > img {
   width: 200px;
 }
+
