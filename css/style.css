@@ -13,7 +13,7 @@
 body {
 
   line-height: 1.5;
-  background-color: orange;
+  background-color: rgb(191, 173, 194);
 }
 
 h1,
@@ -27,6 +27,7 @@ h6 {
 
 p {
   margin: 0;
+
 }
 
 
@@ -38,17 +39,19 @@ p {
 header {
   padding: 20px;
   font-family: var(--font-family);
-  background-color: green;
+  background-color: burlywood;
   display: flex;
   justify-content: space-between;
 }
 
 /*Navigation bar styling*/
 
+.me {}
 
 header figure {
-  border: 4px solid black;
-  border-radius: 20% 20%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -56,8 +59,9 @@ header figure {
 }
 
 header figure img {
-  width: 400px;
-  height: 100px;
+  width: 120%;
+  height: 120%;
+
 
 }
 
@@ -97,59 +101,62 @@ a {
 
 }
 
-.project>img {
-  width: 200px;
+/*this is the styling for the main*/
+main {
+  margin: 0 1.5%;
+  width: 63%;
+  float: right;
+  display: block;
 }
 
 .project-list {
+  margin: 0px 5px;
   display: grid;
+  min-height: 500px;
+  height: 70vh;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 50% 1fr 1fr;
+  gap: 10px 10px;
   grid-template-areas:
     "Project-1 Project-1 Project-1"
     "Project-2 Project-3 Project-3"
     "Project-4 Project-4 Project-5";
 }
 
-.project-list img {
-
-}
-
-
 .project1 {
-  flex: 10%;
+  background-image: url(../images/02-portfolio-1.jpg);
   grid-area: Project-1;
 }
 
 .project2 {
-  flex: 10%;
+  background-image: url(../images/02-portfolio-1.jpg);
   grid-area: Project-2;
 }
 
 .project3 {
-  flex: 10%;
+  background-image: url(../images/02-portfolio-1.jpg);
   grid-area: Project-3;
 }
 
 .project4 {
-  flex: 10%;
+  background-image: url(../images/02-portfolio-1.jpg);
   grid-area: Project-4;
 }
 
 .project5 {
-  flex: 10%;
+  background-image: url(../images/02-portfolio-1.jpg);
   grid-area: Project-5;
 }
 
 aside {
-  margin-left: 20px;
+  margin: 0 1.5%;
   padding: 20px;
   clear: both;
   float: left;
-  width: 20%;
+  width: 30%;
   height: 100%;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #2589bd;
+  font-family: var(--font-family);
+  background-color: burlywood;
 }
 
-@media only screen and (min-width:768px) and (max-width:1024px) {}
+@media only screen and (max-width:600px) {}
