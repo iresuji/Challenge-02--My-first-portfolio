@@ -125,33 +125,42 @@ main {
 
 .project1 {
   background-image: url(../images/02-portfolio-1.jpg);
+  background-size: cover;
   grid-area: Project-1;
 }
 
 .project2 {
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/02-portfolio-2.jpg);
+  background-size: cover;
   grid-area: Project-2;
 }
 
 .project3 {
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/02-portfolio-3.jpg);
+  background-size: cover;
   grid-area: Project-3;
 }
 
 .project4 {
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/02-portfolio-4.jpg);
+  background-size: cover;
   grid-area: Project-4;
 }
 
 .project5 {
   background-image: url(../images/02-portfolio-1.jpg);
+  background-size: cover;
   grid-area: Project-5;
 }
 
 aside {
   margin: 0 1.5%;
+
+}
+
+aside p {
+
   padding: 20px;
-  clear: both;
   float: left;
   width: 30%;
   height: 100%;
@@ -159,4 +168,12 @@ aside {
   background-color: burlywood;
 }
 
-@media only screen and (max-width:600px) {}
+@media only screen and (max-width:600px) {
+  aside p {
+    float: none;
+  }
+
+  main {
+    float: none;
+  }
+}
