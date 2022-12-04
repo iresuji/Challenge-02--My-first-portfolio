@@ -6,6 +6,9 @@
 
 :root {
   --font-family: Arial, Helvetica, sans-serif;
+  --header-footer-background-color: rgb(70, 68, 66);
+  --about-contact-background-color: lightblue;
+
 
 }
 
@@ -13,7 +16,8 @@
 body {
 
   line-height: 1.5;
-  background-color: rgb(191, 173, 194);
+  background-color: whitesmoke;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1,
@@ -38,10 +42,13 @@ p {
 
 header {
   padding: 20px;
-  font-family: var(--font-family);
-  background-color: burlywood;
+  background-color: var(--header-footer-background-color);
   display: flex;
   justify-content: space-between;
+}
+
+h1 {
+  font-size: 30px;
 }
 
 /*Navigation bar styling*/
@@ -96,21 +103,24 @@ a {
   background-image: url(../images/02-hero-bg.jpg);
   display: block;
   margin-bottom: 0px;
-  height: 500px;
+  height: 30vh;
   width: 100%;
 
 }
 
 /*this is the styling for the main*/
 main {
+  font-family: var(--font-family);
   margin: 0 1.5%;
   width: 63%;
   float: right;
   display: block;
 }
 
+h3 a {}
+
 .project-list {
-  margin: 0px 5px;
+  margin: 0px 0px;
   display: grid;
   min-height: 500px;
   height: 70vh;
@@ -155,25 +165,63 @@ main {
 
 aside {
   margin: 0 1.5%;
-
+  width: 30%;
+  display: grid;
+  min-height: 500px;
+  height: 70vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 75% 35%;
+  gap: 30px 10px;
+  grid-template-areas:
+    "about"
+    "contact";
 }
 
 aside p {
 
   padding: 20px;
   float: left;
-  width: 30%;
   height: 100%;
   font-family: var(--font-family);
-  background-color: burlywood;
+  background-color: var(--about-contact-background-color);
 }
 
+aside ul {
+  background-color: var(--about-contact-background-color);
+}
+
+.about {
+  grid-area: about;
+}
+
+.contact {
+
+  grid-area: contact;
+}
+
+footer {
+  background-color: var(--header-footer-background-color);
+  clear: both;
+  text-align: center;
+}
+
+/*This is a CSS media for phones*/
+
 @media only screen and (max-width:600px) {
-  aside p {
+  aside {
     float: none;
+    width: 95%;
   }
 
   main {
     float: none;
+    width: 95%;
+    margin: 2%;
   }
+
+  ul {}
+}
+
+h1 {
+  font-size: small;
 }
