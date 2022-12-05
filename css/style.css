@@ -6,14 +6,18 @@
 
 :root {
   --font-family: Arial, Helvetica, sans-serif;
-
+  --header-footer-background-color: rgb(155, 154, 153);
+  --about-contact-background-color: rgb(173, 204, 214);
+  --color2: whitesmoke;
+  --project-name-padding: 1%;
 }
 
 
 body {
 
   line-height: 1.5;
-  background-color: orange;
+  background-color: var(--color2);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1,
@@ -27,6 +31,7 @@ h6 {
 
 p {
   margin: 0;
+
 }
 
 
@@ -37,18 +42,22 @@ p {
 
 header {
   padding: 20px;
-  font-family: var(--font-family);
-  background-color: green;
+  background-color: var(--header-footer-background-color);
   display: flex;
   justify-content: space-between;
+}
+
+h1 {
+  font-size: 30px;
 }
 
 /*Navigation bar styling*/
 
 
 header figure {
-  border: 4px solid black;
-  border-radius: 20% 20%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -56,8 +65,9 @@ header figure {
 }
 
 header figure img {
-  width: 400px;
-  height: 100px;
+  width: 120%;
+  height: 120%;
+
 
 }
 
@@ -82,74 +92,160 @@ li {
 }
 
 a {
-  color: white;
+  color: darkslategrey;
   text-decoration: none;
 }
 
 /*this is the styling for the central image*/
 
 .hero-banner {
-  background-image: url(../images/02-hero-bg.jpg);
+  background-image: url(../images/shutterstock_1742227652.jpg);
+  background-size: contain;
   display: block;
   margin-bottom: 0px;
-  height: 500px;
+  height: 30vh;
   width: 100%;
-
 }
 
-.project>img {
-  width: 200px;
+.hero-banner h2 {
+  padding: 20px;
 }
+
+/*this is the styling for the main*/
+main {
+  font-family: var(--font-family);
+  margin: 0 1.5%;
+  width: 63%;
+  float: right;
+  display: block;
+}
+
+h3 a {}
 
 .project-list {
+  margin: 0px 0px;
   display: grid;
+  min-height: 500px;
+  height: 70vh;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 50% 1fr 1fr;
+  gap: 10px 10px;
   grid-template-areas:
     "Project-1 Project-1 Project-1"
     "Project-2 Project-3 Project-3"
     "Project-4 Project-4 Project-5";
 }
 
-.project-list img {
-
-}
-
-
 .project1 {
-  flex: 10%;
+  padding: var(--project-name-padding);
+  background-image: url(../images/shutterstock_1007319937.jpg);
+  background-size: cover;
   grid-area: Project-1;
 }
 
 .project2 {
-  flex: 10%;
+  padding: var(--project-name-padding);
+  background-image: url(../images/shutterstock_1635335647.jpg);
+  background-size: cover;
   grid-area: Project-2;
 }
 
 .project3 {
-  flex: 10%;
+  padding: var(--project-name-padding);
+  background-image: url(../images/shutterstock_2020717451.jpg);
+  background-size: cover;
   grid-area: Project-3;
 }
 
 .project4 {
-  flex: 10%;
+  padding: var(--project-name-padding);
+  background-image: url(../images/shutterstock_581335189.jpg);
+  background-size: cover;
   grid-area: Project-4;
 }
 
 .project5 {
-  flex: 10%;
+  padding: var(--project-name-padding);
+  background-image: url(../images/shutterstock_490655017.jpg);
+  background-size: cover;
   grid-area: Project-5;
 }
 
 aside {
-  margin-left: 20px;
-  padding: 20px;
-  clear: both;
-  float: left;
-  width: 20%;
-  height: 100%;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #2589bd;
+  margin: 0 1.5%;
+  width: 30%;
+  display: grid;
+  min-height: 500px;
+  height: 70vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 75% 35%;
+  gap: 30px 10px;
+  grid-template-areas:
+    "about"
+    "contact";
 }
 
-@media only screen and (min-width:768px) and (max-width:1024px) {}
+aside p {
+
+  padding: 20px;
+  float: left;
+  height: 100%;
+  font-family: var(--font-family);
+  background-color: var(--about-contact-background-color);
+}
+
+aside ul {
+  background-color: var(--about-contact-background-color);
+}
+
+.about {
+  grid-area: about;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+
+/*this styling is for the footer area*/
+
+footer {
+  background-color: var(--header-footer-background-color);
+  clear: both;
+  text-align: center;
+}
+
+h4 {
+  color: var(--color2);
+}
+
+/*This is a CSS media for phones*/
+
+@media only screen and (max-width:600px) {
+  aside {
+    float: none;
+    width: 95%;
+  }
+
+  main {
+    float: none;
+    width: 95%;
+    margin: 2%;
+  }
+
+  ul {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+
+  h1 {
+    font-size: small;
+  }
+
+  header figure {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
