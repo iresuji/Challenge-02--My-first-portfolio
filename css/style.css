@@ -8,6 +8,8 @@
   --font-family: Arial, Helvetica, sans-serif;
   --header-footer-background-color: rgb(70, 68, 66);
   --about-contact-background-color: lightblue;
+  --color2: whitesmoke;
+
 
 
 }
@@ -16,7 +18,7 @@
 body {
 
   line-height: 1.5;
-  background-color: whitesmoke;
+  background-color: var(--color2);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -53,7 +55,6 @@ h1 {
 
 /*Navigation bar styling*/
 
-.me {}
 
 header figure {
   width: 50px;
@@ -93,14 +94,15 @@ li {
 }
 
 a {
-  color: white;
+  color: var(--color2);
   text-decoration: none;
 }
 
 /*this is the styling for the central image*/
 
 .hero-banner {
-  background-image: url(../images/02-hero-bg.jpg);
+  background-image: url(../images/shutterstock_1742227652.jpg);
+  background-size: contain;
   display: block;
   margin-bottom: 0px;
   height: 30vh;
@@ -134,31 +136,31 @@ h3 a {}
 }
 
 .project1 {
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/shutterstock_1007319937.jpg);
   background-size: cover;
   grid-area: Project-1;
 }
 
 .project2 {
-  background-image: url(../images/02-portfolio-2.jpg);
+  background-image: url(../images/shutterstock_1635335647.jpg);
   background-size: cover;
   grid-area: Project-2;
 }
 
 .project3 {
-  background-image: url(../images/02-portfolio-3.jpg);
+  background-image: url(../images/shutterstock_2020717451.jpg);
   background-size: cover;
   grid-area: Project-3;
 }
 
 .project4 {
-  background-image: url(../images/02-portfolio-4.jpg);
+  background-image: url(../images/shutterstock_646742593.jpg);
   background-size: cover;
   grid-area: Project-4;
 }
 
 .project5 {
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/shutterstock_581335189.jpg);
   background-size: cover;
   grid-area: Project-5;
 }
@@ -199,11 +201,16 @@ aside ul {
   grid-area: contact;
 }
 
+/*this styling is for the footer area*/
+
 footer {
   background-color: var(--header-footer-background-color);
   clear: both;
   text-align: center;
+}
 
+h4 {
+  color: var(--color2);
 }
 
 /*This is a CSS media for phones*/
@@ -220,9 +227,19 @@ footer {
     margin: 2%;
   }
 
-  ul {}
-}
+  ul {
+    display: flex;
 
-h1 {
-  font-size: small;
+    flex-direction: column;
+  }
+
+
+  h1 {
+    font-size: small;
+  }
+
+  header figure {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
