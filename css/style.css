@@ -6,12 +6,10 @@
 
 :root {
   --font-family: Arial, Helvetica, sans-serif;
-  --header-footer-background-color: rgb(70, 68, 66);
-  --about-contact-background-color: lightblue;
+  --header-footer-background-color: rgb(155, 154, 153);
+  --about-contact-background-color: rgb(173, 204, 214);
   --color2: whitesmoke;
-
-
-
+  --project-name-padding: 1%;
 }
 
 
@@ -94,7 +92,7 @@ li {
 }
 
 a {
-  color: var(--color2);
+  color: darkslategrey;
   text-decoration: none;
 }
 
@@ -107,7 +105,10 @@ a {
   margin-bottom: 0px;
   height: 30vh;
   width: 100%;
+}
 
+.hero-banner h2 {
+  padding: 20px;
 }
 
 /*this is the styling for the main*/
@@ -136,31 +137,36 @@ h3 a {}
 }
 
 .project1 {
+  padding: var(--project-name-padding);
   background-image: url(../images/shutterstock_1007319937.jpg);
   background-size: cover;
   grid-area: Project-1;
 }
 
 .project2 {
+  padding: var(--project-name-padding);
   background-image: url(../images/shutterstock_1635335647.jpg);
   background-size: cover;
   grid-area: Project-2;
 }
 
 .project3 {
+  padding: var(--project-name-padding);
   background-image: url(../images/shutterstock_2020717451.jpg);
   background-size: cover;
   grid-area: Project-3;
 }
 
 .project4 {
-  background-image: url(../images/shutterstock_646742593.jpg);
+  padding: var(--project-name-padding);
+  background-image: url(../images/shutterstock_581335189.jpg);
   background-size: cover;
   grid-area: Project-4;
 }
 
 .project5 {
-  background-image: url(../images/shutterstock_581335189.jpg);
+  padding: var(--project-name-padding);
+  background-image: url(../images/shutterstock_490655017.jpg);
   background-size: cover;
   grid-area: Project-5;
 }
@@ -197,9 +203,9 @@ aside ul {
 }
 
 .contact {
-
   grid-area: contact;
 }
+
 
 /*this styling is for the footer area*/
 
