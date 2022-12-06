@@ -198,11 +198,11 @@ aside ul {
   background-color: var(--about-contact-background-color);
 }
 
-.about {
+#about {
   grid-area: about;
 }
 
-.contact {
+#contact {
   grid-area: contact;
 }
 
